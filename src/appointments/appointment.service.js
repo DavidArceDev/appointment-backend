@@ -1,17 +1,22 @@
 const appointmentRepository = require('./appointment.repository')
 
-const create = async (appointment) => {
+const scheduleAppointment = async (appointment) => {
 
-  // Aquí irá la lógica de negocio
+    // Aquí irá la lógica de negocio
 
-  return appointmentRepository.create(appointment)
+    return appointmentRepository.scheduleAppointment(appointment)
 }
 
 const findAll = async () => {
-  return appointmentRepository.findAll()
+    return appointmentRepository.findAll()
+}
+
+const getProfessionalSchedule = async (professionalId) => {
+    return appointmentRepository.getProfessionalSchedule(professionalId)
 }
 
 module.exports = {
-  create,
-  findAll
+    scheduleAppointment,
+    findAll,
+    getProfessionalSchedule
 }
