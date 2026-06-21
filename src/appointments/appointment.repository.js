@@ -42,7 +42,7 @@ const getProfessionalSchedule = async (professionalId) => {
     const result = await pool.query(
         `
         SELECT *
-        FROM appointment.get_professional_schedule($1)
+        FROM appointment.get_available_slots($1)
         `, [professionalId]
     )
 

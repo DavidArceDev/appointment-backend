@@ -1,9 +1,6 @@
 const appointmentRepository = require('./appointment.repository')
 
 const scheduleAppointment = async (appointment) => {
-
-    // Aquí irá la lógica de negocio
-
     return appointmentRepository.scheduleAppointment(appointment)
 }
 
