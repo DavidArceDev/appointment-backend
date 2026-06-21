@@ -41,7 +41,6 @@ const findAll = async (req, res) => {
 const getProfessionalSchedule = async (req, res) => {
     try {
         const professionalId = req.params.professionalId
-        console.log('professionalId: ', professionalId)
         const result = await appointmentService.getProfessionalSchedule(professionalId)
 
         res.json(result)
